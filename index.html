@@ -10,14 +10,17 @@
         <script src="https://raw.githack.com/AR-js-org/AR.js/3.3.2/aframe/build/aframe-ar.min.js"></script>
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     </head>
-
-<body style='margin: 0; overflow: hidden;'>
-    <a-scene
-        vr-mode-ui="enabled: false"
-		embedded
-        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-
-        <a-entity gps-entity-place="latitude: 17.249933490422496; longitude: -97.69107145883216;" gltf-model="./assets/magnemite/asset.glb" rotation="0 180 0" animation-mixer scale="0.15 0.15 0.15"/>
-        <a-camera gps-camera rotation-reader></a-camera>
-	</a-scene>
+    
+    <body style="margin: 0; overflow: hidden;">
+        <a-scene
+            vr-mode-ui="enabled: false"
+            embedded
+            arjs="sourceType: webcam; debugUIEnabled: false;">
+            
+            <!-- Cargar modelo con URL directa -->
+            <a-entity 
+                gps-entity-place="latitude: 17.249933490422496; longitude: -97.69107145883216;" 
+                gltf-model="./assets/magnemite/asset.glb" rotation="0 180 0" animation-mixer scale="0.15 0.15 0.15"/>
+            <a-camera gps-camera rotation-reader></a-camera>
+	    </a-scene>
 </body>
